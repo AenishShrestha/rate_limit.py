@@ -2,7 +2,9 @@ import redis
 import streamlit as st
 import requests
 
-r = redis.Redis(host='localhost', port=6379, db=0)
+# r = redis.Redis(host='localhost', port=6379, db=0)
+
+r = redis.Redis()
 
 
 
