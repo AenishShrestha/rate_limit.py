@@ -60,4 +60,4 @@ def is_rate_limited(ip_address):
     return "Hello, you are not rate limited!"
 
 
-
+is_rate_limited(ip_address)
