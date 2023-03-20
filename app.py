@@ -53,8 +53,10 @@ def is_rate_limited(ip_address):
     client_ip = ip_address
 
     if is_rate_limited(client_ip):
+        st.write("Too many requests")
         return "Too many requests. Please try again later.", 429
 
+    st.write("Hello")
     return "Hello, you are not rate limited!"
 
 
