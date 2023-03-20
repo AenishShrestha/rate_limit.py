@@ -36,7 +36,7 @@ import requests
     
     
     
-from flask import Flask, request
+import request
 from limits import RateLimitItem, parse_many
 from limits.storage import MemoryStorage
 from limits.strategies import MovingWindowRateLimiter
