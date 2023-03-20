@@ -6,11 +6,11 @@ r = redis.Redis(host='35.201.127.49', port=6379, db=0)
 
 # r = redis.Redis()
 
-# Get the host and port of the Streamlit app
-host, port = st.server.server_address
+# # Get the host and port of the Streamlit app
+# host, port = st.server.server_address
 
-# Print the host
-print("Host:", host)
+# # Print the host
+# print("Host:", host)
 
 def get_public_ip():
     response = requests.get("https://api.ipify.org/")
