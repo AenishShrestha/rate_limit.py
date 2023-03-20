@@ -16,7 +16,7 @@ def get_public_ip():
     response = requests.get("https://api.ipify.org/")
     return response.text
 
-ip_address = get_public_ip()
+str(ip_address) = get_public_ip()
 
 st.write(ip_address)
 
