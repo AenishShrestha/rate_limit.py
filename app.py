@@ -48,17 +48,19 @@ rate_limit = parse_many("3/hour")
 def is_rate_limited(ip_address):
     for limit in rate_limit:
         if not limiter.hit(RateLimitItem(limit, ip_address)):
+            st.write("OKAy")
             return True
+    st.write("OKAy")
     return False
 
-    client_ip = ip_address
+#     client_ip = ip_address
 
-    if is_rate_limited(client_ip):
-        st.write("Too many requests")
-        return "Too many requests. Please try again later.", 429
+#     if is_rate_limited(client_ip):
+#         st.write("Too many requests")
+#         return "Too many requests. Please try again later.", 429
 
-    st.write("Hello")
-    return "Hello, you are not rate limited!"
+#     st.write("Hello")
+#     return "Hello, you are not rate limited!"
 
 
 is_rate_limited(ip_address)
