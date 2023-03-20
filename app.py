@@ -12,11 +12,11 @@ import requests
 # # Print the host
 # print("Host:", host)
 
-# def get_public_ip():
-#     response = requests.get("https://api.ipify.org/")
-#     return response.text
+def get_public_ip():
+    response = requests.get("https://api.ipify.org/")
+    return response.text
 
-# ip_address = get_public_ip()
+ip_address = get_public_ip()
 
 # st.write(ip_address)
 
@@ -36,7 +36,6 @@ import requests
     
     
     
-import request
 from limits import RateLimitItem, parse_many
 from limits.storage import MemoryStorage
 from limits.strategies import MovingWindowRateLimiter
@@ -51,7 +50,7 @@ def is_rate_limited(ip_address):
             return True
     return False
 
-    client_ip = request.remote_addr
+    client_ip = ip_address
 
     if is_rate_limited(client_ip):
         return "Too many requests. Please try again later.", 429
