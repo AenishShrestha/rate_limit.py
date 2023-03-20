@@ -27,7 +27,7 @@ def is_rate_limited(user_id):
     # Set the TTL for the counter to 1 hour
     r.expire(key, 3600)
     # Check if the user has made more than 100 requests in the last hour
-    return r.get(key) > 100
+    return r.get(key) > 5
 
 if is_rate_limited(ip_address):
     st.write("You have exceeded the rate limit.")
