@@ -2,7 +2,7 @@ import redis
 import streamlit as st
 import requests
 
-r = redis.Redis(host='49.127.201.35.bc.googleusercontent.com', port=443, db=0)
+r = redis.Redis(host='35.201.127.49', port=443, db=0)
 
 # r = redis.Redis()
 
