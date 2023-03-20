@@ -18,7 +18,7 @@ def get_public_ip():
 
 ip_address = get_public_ip()
 
-# st.write(ip_address)
+st.write(ip_address)
 
 # def is_rate_limited(user_id):
 #     key = f"rate_limit:{user_id}"
